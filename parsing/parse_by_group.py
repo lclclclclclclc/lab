@@ -56,9 +56,11 @@ def parsefasta(locus):
 		if pg2_dict[zkey] in pg2g:
 			memb = pg2_dict[zkey]
 			exec('SeqIO.write(z, ov%s%s, "fasta")' % (memb, locus))
-	exec('ov%s%s.close()' % (memb, locus))
+	for y in allg:
+		exec('ov%s%s.close()' % (y, locus))
+		exec('os.system("~/scripts/fas2nex.py %s PG_%s_%s.nex")' % (of_names[y], y, locus))
 
-############
+###### The lines below run the functions above ######
 # These are the dictionaries with the individuals and group membership
 pg1_dict, pg2_dict = groups("phylogroups140612.txt")
 

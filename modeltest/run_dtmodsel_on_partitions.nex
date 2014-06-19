@@ -1,9 +1,9 @@
 #NEXUS
 begin paup;
 	execute scar_nd1131003.haps.nex;
-   charset ND1pos1 = 1-.\3;
-   charset ND1pos2 = 2-.\3;
-   charset ND1pos3 = 3-.\3;
+	charset ND1pos1 = 1-.\3;
+	charset ND1pos2 = 2-.\3;
+	charset ND1pos3 = 3-.\3;
 end;
 
 begin python;
